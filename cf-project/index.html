@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CF Analyzer Pro</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚀 Codeforces Analyzer</h1>
+
+    <div class="search-box">
+        <input type="text" id="handle" placeholder="Enter handle (e.g. tourist)">
+        <button onclick="analyze()">Analyze</button>
+    </div>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <div id="result" class="hidden">
+
+        <div class="grid">
+
+            <div class="card">
+                <h2>📈 Rating</h2>
+                <p>Current: <span id="current"></span></p>
+                <p>Predicted: <span id="predicted"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>💡 Suggestions</h2>
+                <ul id="suggestions"></ul>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <h2>🧠 Tag Accuracy</h2>
+            <canvas id="tagChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h2>📊 Difficulty Analysis</h2>
+            <canvas id="difficultyChart"></canvas>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
